@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Translated Feedback</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Translated Responses</h1>
+  {% for response in responses %}
+    <div>
+      <strong>{{ response.timestamp }}</strong>
+      {% for ans in response.answers %}
+        <p><strong>Q:</strong> {{ ans.question }}</p>
+        <p><strong>A:</strong> {{ ans.answer }}</p>
+      {% endfor %}
+    </div>
+    <hr>
+  {% endfor %}
+</body>
+</html>
